@@ -1,0 +1,55 @@
+﻿<Window x:Class="FilmLibraryProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FilmLibraryProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="1000">
+    <Grid Background="LightSkyBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Center" Content="Enter Media Title" FontSize="30" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+        <TextBox x:Name="MovieTitleInputBox" Grid.Row="2" Grid.Column="1" Margin="10,5" FontSize="20" FontWeight="Medium" FontFamily="arial" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="MovieInputButton" Content="Search" Grid.Row="3" Grid.Column="1" Margin="80,5" FontSize="20" FontWeight="Bold" FontFamily="arial" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="MovieInputButton_Click"/>
+        <Label Grid.Row="4" Grid.Column="1" HorizontalContentAlignment="Center" Margin="10,0,0,0" Name="ExceptionLabel" Content="" VerticalAlignment="Center" FontSize="18" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+
+        <Label Grid.Row="6" Grid.Column="1" HorizontalContentAlignment="Center" Margin="10,0,0,0" Name="RecentSearchesLabel" Content="Recent Searches" VerticalAlignment="Center" FontSize="18" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+        <ComboBox Name="ComboRecent" Grid.Row="7" Grid.Column="1" Margin="10,5" SelectionChanged="ComboRecent_SelectionChanged" Text="">
+            <ComboBoxItem Name="ComboRecentOne" Visibility="Collapsed"/>
+            <ComboBoxItem Name="ComboRecentTwo" Visibility="Collapsed"/>
+            <ComboBoxItem Name="ComboRecentThree" Visibility="Collapsed"/>
+            <ComboBoxItem Name="ComboRecentFour" Visibility="Collapsed"/>
+            <ComboBoxItem Name="ComboRecentFive" Visibility="Collapsed"/>
+        </ComboBox>
+
+            <Label Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" Content="Media Details" FontSize="30" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+        <Label Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Left" Margin="10,0,0,0" Name="MovieTitle" Content="Title:" VerticalAlignment="Center" FontSize="18" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+        <Label Grid.Row="3" Grid.Column="0" HorizontalContentAlignment="Left" Margin="10,0,0,0" Name="MovieYear" Content="Year:" VerticalAlignment="Center" FontSize="18" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+        <Label Grid.Row="4" Grid.Column="0" HorizontalContentAlignment="Left" Margin="10,0,0,0" Name="MovieDirector" Content="Director:" VerticalAlignment="Center" FontSize="18" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+        <Label Grid.Row="5" Grid.Column="0" HorizontalContentAlignment="Left" Margin="10,0,0,0" Name="MovieGenre" Content="Genre:" VerticalAlignment="Center" FontSize="18" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+        <Label Grid.Row="6" Grid.Column="0" HorizontalContentAlignment="Left" Margin="10,0,0,0" Name="MovieRuntime" Content="Runtime:" VerticalAlignment="Center" FontSize="18" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+        <Label Grid.Row="7" Grid.Column="0" HorizontalContentAlignment="Left" Margin="10,0,0,0" Name="MovieImdbRating" Content="Imdb Rating:" VerticalAlignment="Center" FontSize="18" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+        <Label Grid.Row="8" Grid.Column="0" HorizontalContentAlignment="Left" Margin="10,0,0,0" Name="MovieMetascoreRating" Content="Metascore Rating:" VerticalAlignment="Center" FontSize="18" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+
+        <Label Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Center" Content="Media Poster" FontSize="30" Background="LightSkyBlue" FontWeight="Bold" FontFamily="arial"/>
+        <Image x:Name="MoviePoster" Grid.Column="2" Grid.Row="2" Grid.RowSpan="7"/>
+    </Grid>
+</Window>
+
+
